@@ -1,0 +1,165 @@
+/* ===== Paragraphs ===== */
+p {
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ===== Heading ===== */
+h2 {
+  color: #ff5ca8;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: titleAnimation 2s ease-in-out;
+}
+
+/* ===== Span styling ===== */
+span {
+  color: #ff4081;
+  font-weight: 700;
+}
+
+/* ===== Main container ===== */
+.modell-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #fff0f5, #ffe4ec, #ffe1f0);
+  box-shadow: 0 10px 40px rgba(255, 182, 193, 0.25);
+  padding: 20px;
+  overflow: hidden;
+  animation: fadeSlideUp 1.4s ease-out;
+  width: 100%;
+  max-width: 1224px;
+}
+
+/* ===== Facts section ===== */
+.facts-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  animation: slideFromRight 1.2s ease-out both;
+}
+
+/* ===== Text card ===== */
+.facts-section .div1 {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff0f5;
+  border-radius: 25px;
+  filter: drop-shadow(0 6px 20px rgba(233, 30, 99, 0.3));
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: transform 0.6s ease;
+  animation: slideFromRight 1.2s ease-out both;
+}
+
+/* ===== Stats images container ===== */
+.div2 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 30px;
+  flex-wrap: wrap; /* allow images to wrap on smaller screens */
+}
+
+/* ===== Stats images styling ===== */
+.stats {
+  width: 500px;        /* default width */
+  max-width: 100%;     /* prevent overflow on small screens */
+  height: auto;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translate(-50px, 50px);
+  animation: slideFadeIn 1.2s forwards;
+  transition: transform 0.3s ease;
+}
+
+/* ===== Stagger second image ===== */
+.stats:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+/* ===== Animations ===== */
+@keyframes slideFadeIn {
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== Hover effect on images ===== */
+.stats:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  .stats {
+    width: 150px; /* smaller images on tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.7em;
+  }
+
+  .div2 {
+    flex-direction: column; /* stack images vertically */
+    gap: 15px;
+  }
+
+  .stats {
+    width: 100%; /* full width on mobile */
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .facts-section .div1 {
+    padding: 15px;
+  }
+}

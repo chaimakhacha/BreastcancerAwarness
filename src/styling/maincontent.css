@@ -1,0 +1,99 @@
+.mymaincontent {
+  position: relative;
+  background-image: url("../src/pictures/fighterpink.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(255, 182, 193, 0.4), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  color: #fff;
+  animation: fadeInUp 2s ease;
+  margin-top: 5%;
+}
+
+#maintitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff5ca8;
+  text-shadow: 0 0 15px rgba(255, 192, 203, 0.6);
+  margin-bottom: 1rem;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #fffafc;
+  text-shadow: 0 0 15px black;
+  margin-bottom: 2rem;
+  animation: fadeIn 2.5s ease;
+}
+
+.learnmore {
+  background: linear-gradient(90deg, #ff5ca8, #ff9ecf);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  
+}
+
+.learnmore:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.6);
+  background: linear-gradient(90deg, #ff9ecf, #ff5ca8);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff6fb1, 0 0 20px #ff6fb1;
+  }
+  to {
+    text-shadow: 0 0 20px #ff9ecf, 0 0 40px #ffb6c1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

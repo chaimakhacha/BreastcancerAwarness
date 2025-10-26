@@ -1,0 +1,39 @@
+.box{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+.box p{
+    font-size: 1.5em;
+    color: black;
+    font-weight: 600;
+    line-height: 40px;
+    animation: textanimation 1s ease-in-out;
+    animation-timeline: view(5%);
+}
+.box h2{
+    color: #ff5ca8;
+    font-size: 2.5em;
+    text-align: center;
+    animation: titleanimation 2s ease-in-out;
+    animation-timeline: view(10%);
+    
+}
+@keyframes textanimation {
+    from{
+       
+    }
+    to{
+        
+    }
+}
+
+@keyframes titleanimation {
+    from{
+        transform: translateX(-80px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
