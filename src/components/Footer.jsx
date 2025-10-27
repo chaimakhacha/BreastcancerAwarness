@@ -36,7 +36,7 @@ export default function Footer() {
         {/* Brand Section */}
         <div className="footer-section footer-brand">
           <div className="footer-logo">
-            <img src="../src/pictures/logo.png" alt="OctobreRose Logo" />
+            <img src="/logo.png" alt="OctobreRose Logo" />
             <h3>OctobreRose</h3>
           </div>
           <p className="footer-tagline">
