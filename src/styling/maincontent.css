@@ -1,6 +1,6 @@
 .mymaincontent {
   position: relative;
-  background-image: url("../src/pictures/fighterpink.jpg");
+  background-image: url("/fighterpink.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
