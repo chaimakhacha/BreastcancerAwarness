@@ -10,8 +10,8 @@ export default function FactsStats() {
           </p>
         </div>
         <div className="div2">
-              <img className="stats" src="../src/pictures/Screenshot 2025-10-26 132415.png" alt="Breast Cancer Stats" />
-              <img className="stats" src="../src/pictures/Screenshot 2025-10-26 132455.png" alt="Breast Cancer Stats 2" />
+              <img className="stats" src="/Screenshot 2025-10-26 132415.png" alt="Breast Cancer Stats" />
+              <img className="stats" src="/Screenshot 2025-10-26 132455.png" alt="Breast Cancer Stats 2" />
         </div>
             <div className="div1">
           <p>
